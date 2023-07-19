@@ -1,5 +1,8 @@
 pipeline {
   agent { label 'slave1' }
+tools {
+        jdk "Java_home" // the name you have given the JDK installation in Global Tool Configuration
+    }
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
